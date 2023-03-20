@@ -1,0 +1,63 @@
+/* 列表页专有的CSS */
+.nav {
+  overflow: hidden;
+}
+.sk {
+  /* 采用定位方式 */
+  position: absolute;
+  border-left: 1px solid #c81523;
+  left: 190px;
+  top: 40px;
+  padding-left: 14px;
+  padding-top: 3px;
+}
+.sk_list {
+  float: left;
+}
+.sk_list ul li {
+  float: left;
+}
+.sk_list ul li a {
+  display: block;
+  /* nav 高度是47px 所以行高为47px */
+  line-height: 47px;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+.sk_con {
+  float: left;
+}
+.sk_con ul li {
+  float: left;
+}
+.sk_con ul li a {
+  display: block;
+  /* 当行高大于高度 文字偏下 用于底端对齐*/
+  line-height: 49px;
+  padding: 0 20px;
+  font-size: 14px;
+}
+/* 后面加小三角 用after伪元素 */
+.sk_con ul li:last-child a::after {
+  font-family: "icomoon";
+  content: '\e91e';
+}
+.sk_bd ul li {
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+  width: 290px;
+  height: 460px;
+  /* 防止因加边框图片抖动的问题 */
+  border: 1px solid transparent;
+}
+/* 每4个一排 所以4n  */
+/* 此时往往会出现 浮动的问题，要清除浮动 */
+.sk_bd ul li:nth-child(4n){
+  margin-right: 0;
+}
+.sk_bd ul li:hover {
+  border: 1px solid #c81523;
+}

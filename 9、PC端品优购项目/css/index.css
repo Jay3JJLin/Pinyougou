@@ -1,0 +1,206 @@
+.main {
+  width: 980px;
+  /* 由于父级盒子很多情况下，不方便给高度，但是子盒子浮动又不占有位置，最后父级盒子高度为 0 时，就会影响下面的标准流盒子。 */
+  height: 455px;
+  margin-left: 220px;
+  margin-top: 10px;
+}
+.focus {
+  float: left;
+  width: 721px;
+  height: 455px;
+  background-color: purple;
+}
+.newflash {
+  /* 右浮动 会让中间距离自动出现 */
+  float: right;
+  width: 250px;
+  height: 455px;
+}
+.news {
+  /* 和父亲同宽 */
+  height: 165px;
+  /* 记得加边框 */
+  border: 1px solid #e4e4e4;
+}
+.news-hd {
+  height: 31px;
+  /* 垂直居中 */
+  line-height: 31px;
+  /* 中间有条 虚点线 */
+  border-bottom: 1px dotted #e4e4e4;
+  padding: 0 15px;
+}
+.news-hd h5 {
+  float: left;
+  font-size: 14px;
+}
+.news-hd .more {
+  float: right;
+}
+.news-hd .more::after {
+  font-family: "icomoon";
+  content: "\e920";
+}
+.news-bd {
+  padding: 5px 15px 0;
+}
+.news-bd ul li {
+  height: 24px;
+  line-height: 24px;
+  /* 1、先隐藏溢出部分 */
+  overflow: hidden;
+  /* 2、必须一行显示，不允许换行 */
+  white-space: nowrap;
+  /* 3、多出内容用省略号 */
+  text-overflow: ellipsis;
+}
+.lifeservice {
+  height: 209px;
+  border: 1px solid #e4e4e4;
+  border-top: 0;
+  /* 切掉多余的 右边盒子 */
+  overflow: hidden;
+}
+.lifeservice ul {
+  width: 252px;
+}
+.lifeservice ul li {
+  position: relative;
+  /* 装不开 修改父盒子ul的宽度 */
+  float: left;
+  width: 63px;
+  height: 71px;
+  /* 只加右下边框 然后浮动排列 */
+  border-right: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  /* 连同里面的图标和文字 */
+  text-align: center;
+}
+.lifeservice ul li:nth-of-type(2) img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.lifeservice ul li i {
+  display: inline-block;
+  width: 24px;
+  height: 28px;
+  background-color: pink;
+  margin-top: 12px;
+  background: url(../images/icons.png) no-repeat -19px -15px;
+}
+.bargain {
+  margin-top: 5px;
+}
+
+/* 推荐模块 */
+.recom {
+  height: 163px;
+  background-color: #ebebeb;
+  margin-top: 12px;
+}
+.recom_hd {
+  float: left;
+  height: 163px;
+  width: 205px;
+  background-color: #5c5251;
+  /* 水平居中  可以文字可以图片*/
+  text-align: center;
+  padding-top: 30px;
+}
+.recom_bd {
+  float: left;
+}
+.recom_bd ul li {
+  position: relative;
+  float: left;
+  height: 163px;
+  width: 248px;
+}
+/* 限定li中图片大小 便于后台人员上传 */
+.recom_bd ul li {
+  width: 248px;
+  height: 163px;
+}
+/* 选择前三个li 后面加竖线 */
+.recom_bd ul li:nth-child(-n+3):after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 1px;
+  height: 145px;
+  background-color: #ddd;
+}
+
+/* 家用电器模块 */
+.box_hd {
+  height: 30px;
+  border-bottom: 2px solid #c81623;
+}
+.box_hd h3 {
+  float: left;
+  font-size: 18px;
+  color: #c81623;
+  font-weight: 400;
+}
+.tab_list {
+  float: right;
+  /* 垂直居中 */
+  line-height: 30px;
+}
+.tab_list ul li {
+  float: left;
+}
+.tab_list ul li a {
+  /* 只点击盒子里面的字体链接 所以用margin  反之 padding是点空白的地方也可以 */
+  margin: 0 15px;
+}
+.floor .w {
+  /* 因为其他楼层也有外边距 所以给w */
+  margin-top: 30px;
+}
+.box_bd {
+  height: 361px;
+  background-color: #fff;
+}
+.tab_list_item>div {
+  float: left;
+  height: 361px;
+}
+/* 盒子宽度类 */
+.col_210 {
+  width: 210px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.col_210 ul {
+  padding-left: 10px;
+}
+.col_210 ul li {
+  float: left;
+  width: 85px;
+  /* 高度不继承 */
+  height: 34px;
+  text-align: center;
+  line-height: 34px;
+  border-bottom: 1px solid #ccc;
+  margin-right: 10px;
+}
+.col_329 {
+  width: 329px;
+}
+.col_221 {
+  width: 221px;
+  border-right: 1px solid #ccc;
+}
+.col_219 {
+  width: 219px;
+}
+.bb {
+  /* 一般情况下，a如果包含有宽度的盒子,a必须转换为块级元素 */
+  display: block;
+  border-bottom: 1px solid #ccc;
+
+}
